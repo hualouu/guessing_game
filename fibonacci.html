@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập vào số phần tử của dãy Fibonacci:"));
+let a = 0, b = 1, c, i = 0;
+
+while (i < n) {
+  if (i < 2) {
+    c = i;
+  } else {
+    c = a + b;
+    a = b;
+    b = c;
+  }
+  document.write(c);
+  i++;
+}
+    </script>
+</body>
+</html>
