@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let inputNumber = parseInt(prompt("Nhập vào một số nguyên dương:"));
+        let reverseNumber = 0;
+        let remainder;
+
+        while (inputNumber > 0) {
+            remainder = inputNumber % 10;
+            reverseNumber = (reverseNumber * 10) + remainder;
+            inputNumber = Math.floor(inputNumber / 10);
+        }
+
+        console.log("Số đảo ngược của số đã nhập là: " + reverseNumber);
+    </script>
+</body>
+
+</html>
