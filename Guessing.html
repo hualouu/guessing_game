@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>Guessing Game</title>
+
+<body>
+    <button id="playBtn">Chơi</button>
+    <script>
+        let playBtn = document.getElementById('playBtn');
+        playBtn.addEventListener('click', playGame);
+
+        function playGame() {
+            let maxNum = parseInt(prompt("Nhập vào số lớn nhất mà bạn muốn đoán:"));
+            let randomNumber = Math.floor(Math.random() * maxNum) + 1;
+            let guessCount = 0;
+            let guess;
+
+            do {
+                guess = parseInt(prompt("Bạn đoán số nào?"));
+                guessCount++;
+
+                if (guess === randomNumber) {
+                    alert("Chúc mừng! Bạn đã đoán đúng số.");
+                    return;
+                } else if (guess < randomNumber) {
+                    alert("Số bạn đoán nhỏ hơn số cần đoán.");
+                } else {
+                    alert("Số bạn đoán lớn hơn số cần đoán.");
+                }
+            } while (guessCount < 3);
+
+            alert("Bạn đã hết số lần đoán. Số cần đoán là: " + randomNumber);
+        }
+    </script>
+</body>
+
+</html>
