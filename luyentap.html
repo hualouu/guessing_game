@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let i = 1;
+
+        while (i <= 100) {
+            console.log(i);
+
+            if (i === 99) {
+                alert("Đã hoàn thành!");
+            }
+
+            i++;
+        }
+    </script>
+    <script>
+        let temperature = prompt("Nhập nhiệt độ hiện tại:");
+
+        if (temperature > 100) {
+            alert("Nhiệt độ quá cao, hãy giảm nhiệt độ");
+        } else if (temperature < 20) {
+            alert("Nhiệt độ quá thấp, hãy tăng nhiệt độ");
+        } else {
+            alert("Nhiệt độ trong giới hạn cho phép");
+        }
+    </script>
+    <script>
+        let a = 0;
+        let b = 1;
+
+        while (b <= 6765) {
+            console.log(b);
+
+            let temp = b;
+            b = a + b;
+            a = temp;
+        }
+    </script>
+    <script>
+        let c = 0;
+        let d = 1;
+
+        while (d % 5 !== 0) {
+            let temp = b;
+            d = c + d;
+            c = temp;
+        }
+
+        console.log(d);
+    </script>
+    <script>
+        let x = 0;
+        let y = 1;
+        let sum = 0;
+        let count = 0;
+
+        while (count < 20) {
+            sum += y;
+
+            let temp = y;
+            y = x + y;
+            x = temp;
+
+            count++;
+        }
+
+        document.write(sum);
+    </script>
+    <script>
+        let s = 0;
+        let o = 0;
+        let g = 1;
+
+        while (o < 30) {
+            if (g % 7 === 0) {
+                s += i;
+                o++;
+            }
+
+            g++;
+        }
+
+        document.write(s);
+    </script>
+    <script>
+        let t = 1;
+
+        while (t <= 100) {
+            if (t % 3 === 0 && t % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (t % 3 === 0) {
+                console.log("Fizz");
+            } else if (t % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(t);
+            }
+
+            t++;
+        }
+    </script>
+
+</body>
+
+</html>
